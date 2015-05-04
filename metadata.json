@@ -1,5 +1,5 @@
 {
-  "name": "__MODULE_AUTHOR__-__NAME__",
+  "name": "__MODULE_AUTHOR__-__MODULE_NAME__",
   "version": "0.1.0",
   "author": "__MODULE_AUTHOR__",
   "summary": "__MODULE_SUMMARY__",

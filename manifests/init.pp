@@ -1,6 +1,6 @@
-# == Class: __NAME__
+# == Class: __MODULE_NAME__
 #
-# Full description of class __NAME__ here.
+# Full description of class __MODULE_NAME__ here.
 #
 # === Parameters
 #
@@ -23,7 +23,7 @@
 #
 # === Examples
 #
-#  class { __NAME__:
+#  class { __MODULE_NAME__:
 #    servers => [ 'pool.ntp.org', 'ntp.local.company.com' ],
 #  }
 #
@@ -35,7 +35,7 @@
 #
 # Copyright 2014 North Development AB
 #
-class __NAME__ inherits __NAME__::params {
+class __MODULE_NAME__ inherits __MODULE_NAME__::params {
 
 
 }

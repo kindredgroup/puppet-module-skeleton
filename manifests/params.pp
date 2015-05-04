@@ -1,6 +1,6 @@
-# == Class: __NAME__::params
+# == Class: __MODULE_NAME__::params
 #
 # Params class
 #
-class __NAME__::params {
+class __MODULE_NAME__::params {
 }

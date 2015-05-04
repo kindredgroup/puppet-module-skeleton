@@ -1,1 +1,1 @@
-include ::__NAME__
+include ::__MODULE_NAME__

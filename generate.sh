@@ -99,15 +99,11 @@ if [ ! -x "${SED}" ]; then
   SED=$(which sed)
 fi
 
-info "Setting name '${MODULE_NAME}'..."
-for F in "${FILES[@]}"; do
-  info "Processing file: '$F'"
-  $SED -i -e "s|__NAME__|${MODULE_NAME}|g" $F
-done
-
-for V in "MODULE_AUTHOR SOURCE_URL PROJECT_URL ISSUES_URL MODULE_SUMMARY"; do
-  info "Setting ${V} to '${!V}'..."
-  $SED -i -e "s|__${V}__|${!V}|" metadata.json
+for V in "MODULE_NAME MODULE_AUTHOR SOURCE_URL PROJECT_URL ISSUES_URL MODULE_SUMMARY"; do
+  for F in "${FILES[@]}"; do
+    info "Setting ${V} to '${!V}' in ${F}..."
+    $SED -i -e "s|__${V}__|${!V}|g" $F
+  done
 done
 
 info "Adding encrypted credentials for travis"
