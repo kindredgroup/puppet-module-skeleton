@@ -1,0 +1,13 @@
+rvm: 1.9.3
+env:
+- PUPPET_VERSION=3.7.3
+script:
+- bundle exec rake lint
+- bundle exec rake validate
+- bundle exec rake spec
+before_deploy:
+- bundle exec rake clean
+- bundle exec rake set_travis_version
+deploy:
+  skip_cleanup: true
+  provider: puppetforge

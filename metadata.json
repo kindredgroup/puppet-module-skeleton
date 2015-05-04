@@ -1,0 +1,13 @@
+{
+  "name": "__MODULE_AUTHOR__-__NAME__",
+  "version": "0.1.0",
+  "author": "__MODULE_AUTHOR__",
+  "summary": "__MODULE_SUMMARY__",
+  "license": "Apache-2.0",
+  "source": "__SOURCE_URL__",
+  "project_page": "__PROJECT_URL__",
+  "issues_url": "__ISSUES_URL__",
+  "dependencies": [
+  ]
+}
+
