@@ -64,8 +64,9 @@ verify_variable_set() {
 ###
 MODULE_AUTHOR=${MODULE_AUTHOR:-"unibet"}
 GITHUB_ORG=$(echo ${GITHUB_ORG:-"unibet"} |tr '[:upper:]' '[:lower:]')
-SOURCE_URL=https://github.com/${GITHUB_ORG}/puppet-${MODULE_NAME}.git
-PROJECT_URL=https://github.com/${GITHUB_ORG}/puppet-${MODULE_NAME}
+PROJECT_URL=${PROJECT_URL:-"https://github.com/${GITHUB_ORG}/puppet-${MODULE_NAME}"}
+SOURCE_URL=${SOURCE_URL:-"${PROJECT_URL}.git"}
+ISSUES_URL=${ISSUES_URL:-"${PROJECT_URL}/issues"}
 MODULE_SUMMARY=${MODULE_SUMMARY:-"Unibet ${MODULE_NAME} puppet module"}
 MODULE_PATH=$(dirname ${BASH_SOURCE[0]})
 
@@ -99,7 +100,7 @@ if [ ! -x "${SED}" ]; then
   SED=$(which sed)
 fi
 
-for V in "MODULE_NAME MODULE_AUTHOR SOURCE_URL PROJECT_URL ISSUES_URL MODULE_SUMMARY"; do
+for V in MODULE_NAME MODULE_AUTHOR SOURCE_URL PROJECT_URL ISSUES_URL MODULE_SUMMARY; do
   for F in "${FILES[@]}"; do
     info "Setting ${V} to '${!V}' in ${F}..."
     $SED -i -e "s|__${V}__|${!V}|g" $F
