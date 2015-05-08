@@ -1,4 +1,4 @@
-# __MODULE_AUTHOR_-__MODULE_NAME__
+# __MODULE_AUTHOR__-__MODULE_NAME__
 
 #### Table of Contents
 
